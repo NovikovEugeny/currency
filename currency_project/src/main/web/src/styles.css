@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    background-color: #252525;
+}
+
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.error-code {
+  font-size: 375px;
+  color: #ffffff;
+  margin-top: -5%;
+  margin-bottom: -10%;
+  text-align: center;
+}
+
+.error-message {
+  font-size: 100px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.modal-header {
+  background-color: #454242;
+  color: #B1ACAC;
+  margin-bottom: -25px;
+}
+
+.modal-header .close {
+  margin-top: -30px;
+  margin-bottom: 25px;
+}
+
+.modal-body {
+  color: #B1ACAC;
+  background-color: #d6d6d6;
+}
+
+input.ng-touched.ng-invalid {
+  border: solid #ff3916 1px;
+}
+
+input.ng-touched.ng-valid {
+  border: solid #10ff7a 1px;
+}

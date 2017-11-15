@@ -1,0 +1,25 @@
+<header class="guest-header">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="logo">
+                <img id="coin" src="assets/images/infinitecoin.png">
+                <a id="link-logo" [routerLink]="['']">Finance today</a>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <nav>
+                <div class="start-top-links">
+                    <a [routerLink]="['/subscription-info']">Alert subscriptions</a>
+                    <a [routerLink]="['/analytics-info']">Analytics</a>
+                    <a [routerLink]="['/payment-info']">Ways of payment</a>
+                </div>
+            </nav>
+        </div>
+        <div class="col-md-3">
+            <div class="auth">
+                <app-sign-in-modal></app-sign-in-modal>
+                <app-sign-up-modal></app-sign-up-modal>
+            </div>
+        </div>
+    </div>
+</header>

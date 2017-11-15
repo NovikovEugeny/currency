@@ -1,0 +1,8 @@
+nav {
+  background-color: #252525;
+  border-radius: 0px;
+}
+
+nav li > a {
+  font-size: 19px;
+}

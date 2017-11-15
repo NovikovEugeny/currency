@@ -1,0 +1,20 @@
+<header class="user-header">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="logo">
+        <img id="coin" src="assets/images/infinitecoin.png">
+        <a id="link-logo" [routerLink]="['']">Finance today</a>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <p>{{username}}</p>
+    </div>
+    <div class="col-md-2">
+      <div class="auth">
+        <button class="btn btn-default" (click)="logout()"><span
+          class="glyphicon glyphicon-log-out"></span> log out
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

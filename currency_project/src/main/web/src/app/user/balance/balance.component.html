@@ -1,0 +1,31 @@
+<div class="current-funds">
+  <div class="container">
+    <span>Your current balance is ${{balance}}</span>
+    <a href="#demo" class="btn btn-default" data-toggle="collapse"><span id="plus"
+                                                                         class="glyphicon glyphicon-plus"></span>
+      add funds</a>
+    <div id="demo" class="collapse">
+      <div class="form-group">
+        <label for="card">Card number:</label>
+        <input class="form-control" id="card" name="card" [(ngModel)]="card" #c="ngModel"
+               data-inputmask="'mask': '9999 9999 9999 9999'"
+               placeholder="you must type 16 digits" required pattern="[0-9]{16}"/>
+      </div>
+      <div class="form-group">
+        <label for="sum">Sum:</label>
+        <input class="form-control" id="sum" name="sum" [(ngModel)]="sum" #s="ngModel" required
+               pattern="[1-9][0-9]+"/>
+      </div>
+      <div class="form-group">
+        <button [disabled]="s.invalid || c.invalid" id="add" class="btn btn-default"
+                (click)="addFunds()">
+          add
+        </button>
+        <button type="reset" class="btn btn-default" (click)="reset()"><span id="trash"
+                                                                             class="glyphicon glyphicon-trash"></span>
+          clear
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

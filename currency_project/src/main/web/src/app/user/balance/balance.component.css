@@ -1,0 +1,57 @@
+.current-funds {
+  text-align: center;
+  color: #e2e2e2;
+  margin-top: 3%;
+}
+
+.current-funds span {
+  font-size: 35px;
+}
+
+#trash, #plus {
+  font-size: 15px;
+}
+
+.current-funds a {
+  margin-left: 2%;
+  margin-top: -1.5%;
+}
+
+input {
+  width: 30%;
+  margin-left: 35%;
+  background-color: #e2e2e2;
+}
+
+button {
+  width: 75px;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+label {
+  font-size: 17px;
+  color: #d9d9d9;
+}
+
+#demo {
+  margin-top: 3%;
+}
+
+button, a {
+  color: #3A8EF2;
+  border: 2px solid #3A8EF2;
+}
+
+button:hover {
+  color: #2E2E2E;
+  border: 2px solid #2E2E2E;
+  background-color: #4A99F7;
+}
+
+a:hover {
+  color: #2E2E2E;
+  border: 2px solid #2E2E2E;
+  background-color: #4A99F7;
+}

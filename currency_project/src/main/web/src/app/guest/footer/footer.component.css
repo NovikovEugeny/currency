@@ -1,0 +1,15 @@
+footer .container {
+    background-color: #454242;
+    align-items: center;
+    padding-top: 13px;
+    padding-bottom: 12px;
+    font-size: 15px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    color: #B1ACAC;
+    margin-top: 34px;
+}
+
+#footer-info {
+    text-align: center;
+}
