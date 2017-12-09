@@ -5,5 +5,4 @@ export class User {
   login: string;
   password: string;
   balance: number;
-
 }

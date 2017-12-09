@@ -3,9 +3,9 @@ package by.bsuir.currency_project.service.impl;
 import by.bsuir.currency_project.entity.User;
 import by.bsuir.currency_project.repository.UserRepository;
 import by.bsuir.currency_project.service.UserService;
-import by.bsuir.currency_project.service.exception.DuplicateEmailException;
+import by.bsuir.currency_project.service.exception.ConflictException;
 import by.bsuir.currency_project.service.security.SecurityService;
-import by.bsuir.currency_project.service.validator.UserValidator;
+import by.bsuir.currency_project.service.util.validator.UserValidator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,9 +18,6 @@ public class UserServiceImpl implements UserService {
     private static final Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
 
     @Autowired
-    private UserValidator userValidator;
-
-    @Autowired
     private SecurityService securityService;
 
     @Autowired
@@ -31,17 +28,16 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User signIn(String login, String password) {
-        userValidator.validateSignIn(login, password);
-
+        UserValidator.validateSignIn(login, password);
         return securityService.autologin(login, password);
     }
 
     @Override
     public User signUp(User user) {
-        userValidator.validateSignUp(user);
+        UserValidator.validateSignUp(user);
 
         if (userRepository.findUserByLogin(user.getLogin()) != null) {
-            throw new DuplicateEmailException();
+            throw new ConflictException();
         }
 
         String password = user.getPassword();
@@ -56,7 +52,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void addFunds(int id, double sum) {
-        userValidator.validateAddFunds(sum);
+        UserValidator.validateAddFunds(sum);
 
         User user = userRepository.findOne(id);
         double balance = user.getBalance() + sum;

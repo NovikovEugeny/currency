@@ -1,8 +1,15 @@
 nav {
   background-color: #252525;
   border-radius: 0px;
+  text-align: center;
+  margin-top: 1px;
 }
 
 nav li > a {
-  font-size: 19px;
+  font-size: 21px;
+}
+
+ul {
+  margin-top: -15px;
+  margin-left: 22%;
 }

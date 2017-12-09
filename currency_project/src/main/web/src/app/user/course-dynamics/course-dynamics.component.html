@@ -1,0 +1,41 @@
+<div class="table-dynamics">
+  <div class="col-md-4">
+    <table class="table">
+      <thead class="thead-dark">
+      <tr>
+        <th>Date</th>
+        <th>Course</th>
+        <th>Relative value</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of list">
+        <td>
+          {{item.date | date:'dd-MM-yyyy'}}
+        </td>
+        <td>
+          {{item.value}}
+        </td>
+        <td>
+          <div [ngStyle]="{'color': item.relativity < 0 ? 'red' : 'green'}">{{item.relativity}}
+          </div>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="graphic-dynamics">
+  <div class="col-md-8">
+    <div style="display: block;">
+      <canvas baseChart width="400" height="230"
+              [datasets]="lineChartData"
+              [labels]="lineChartLabels"
+              [options]="lineChartOptions"
+              [colors]="lineChartColors"
+              [legend]="lineChartLegend"
+              [chartType]="lineChartType">
+      </canvas>
+    </div>
+  </div>
+</div>

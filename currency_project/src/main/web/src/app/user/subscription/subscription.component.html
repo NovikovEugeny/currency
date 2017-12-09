@@ -1,0 +1,40 @@
+<div *ngIf="subscribtion" class="current-subscription">
+  <div class="container">
+    <span>Your current subscription is valid until {{endDate | date:'dd-MM-yyyy HH:mm:ss'}}</span>
+    <button id="uns" class="btn btn-default" (click)="unsubscribe()"> unsubscribe</button>
+  </div>
+</div>
+<br>
+<div class="subscribe">
+  <div class="container">
+    <span>Create a new subscription</span>
+    <a href="#add-s" class="btn btn-default" data-toggle="collapse">
+      <span id="subcr" class="glyphicon glyphicon-pencil"></span></a>
+    <div id="add-s" class="collapse">
+      <br>
+      <div *ngIf="isEnoughMoney == false" class="alert alert-danger alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span id="close"
+          aria-hidden="true">&times;</span></button>
+        Sorry, it is not enough money on your balance!
+      </div>
+      <div class="form-group">
+        <label for="type">Type:</label>
+        <select class="form-control" id="type" [(ngModel)]="subscriptionType">
+          <option value="week">week - $10</option>
+          <option value="month">month - $20</option>
+          <option value="year">year - $50</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="card-s">Card number:</label>
+        <input class="form-control" id="card-s" name="card-s" [(ngModel)]="cardNumberS" #cs="ngModel"
+               placeholder="you must type 16 digits" required pattern="[0-9]{16}"/>
+      </div>
+      <div class="form-group">
+        <button [disabled]="cs.invalid" id="add" class="btn btn-default"
+                (click)="createSubscription()">create
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

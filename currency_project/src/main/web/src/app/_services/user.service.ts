@@ -1,5 +1,5 @@
 import {Injectable} from "@angular/core";
-import {Headers, Http, RequestOptions} from "@angular/http";
+import {Headers, Http, RequestOptions, RequestOptionsArgs} from "@angular/http";
 import {User} from "../_models/user";
 import 'rxjs/add/operator/toPromise';
 import "rxjs/add/operator/map";
@@ -12,10 +12,10 @@ export class UserService {
   constructor(private http: Http) {
   }
 
-  private signInUrl = 'http://localhost:8081/sign-in';
-  private signUpUrl = 'http://localhost:8081/sign-up';
-  private logoutUrl = 'http://localhost:8081/log-out';
-  private addFundsUrl = 'http://localhost:8081/addFunds';
+  private signInUrl = '/api/sign-in';
+  private signUpUrl = '/api/sign-up';
+  private logoutUrl = '/api/log-out';
+  private addFundsUrl = '/api/addFunds';
 
 
   signIn(user: User): Observable<User> {

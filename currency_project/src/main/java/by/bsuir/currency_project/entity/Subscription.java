@@ -1,5 +1,7 @@
 package by.bsuir.currency_project.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
@@ -11,6 +13,7 @@ public class Subscription implements Serializable {
     private static final long serialVersionUID = 335286710320304845L;
 
     private int id;
+    @JsonIgnore
     private User user;
     private SubscriptionType subscriptionType;
     private Date subscriptionDate;

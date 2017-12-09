@@ -1,0 +1,63 @@
+.current-subscription, .subscribe {
+  text-align: center;
+  color: #e2e2e2;
+}
+
+.current-subscription span {
+  font-size: 35px;
+}
+
+#uns-s, #subcr {
+  font-size: 17px;
+}
+
+#uns, a {
+  margin-top: -17px;
+  margin-left: 10px;
+}
+
+input, select {
+  width: 30%;
+  margin-left: 35%;
+  background-color: #e2e2e2;
+}
+
+label {
+  font-size: 15px;
+  color: #B1ACAC;
+}
+
+a {
+  width: 60px;
+}
+
+.subscribe span {
+  font-size: 35px;
+}
+
+button:hover {
+  color: #2E2E2E;
+  border: 2px solid #2E2E2E;
+  background-color: #4A99F7;
+}
+
+button, a {
+  color: #3A8EF2;
+  border: 2px solid #3A8EF2;
+}
+
+
+a:hover {
+  color: #2E2E2E;
+  border: 2px solid #2E2E2E;
+  background-color: #4A99F7;
+}
+
+.alert {
+  width: 40%;
+  margin-left: 30%;
+}
+
+#close {
+  font-size: 20px;
+}

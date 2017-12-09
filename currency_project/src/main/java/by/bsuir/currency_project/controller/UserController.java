@@ -10,10 +10,9 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.HashMap;
+import java.util.Map;
 
 @RestController()
-@CrossOrigin(/*"http://localhost:4200"*/)
 public class UserController {
 
     @Autowired
@@ -38,9 +37,8 @@ public class UserController {
     }
 
     @PatchMapping("/addFunds")
-    public void add(@RequestBody HashMap<String, Integer> data) {
-        userService.addFunds(data.get("id"), data.get("sum"));
+    public void add(@RequestBody Map<String, Double> data) {
+        userService.addFunds(data.get("id").intValue(), data.get("sum"));
     }
-
 
 }

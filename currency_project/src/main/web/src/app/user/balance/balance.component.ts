@@ -14,7 +14,7 @@ export class BalanceComponent {
 
   balance = JSON.parse(localStorage.getItem('currentUser')).balance;
   sum: string;
-  card: string;
+  cardNumberB: string;
 
   addFunds() {
     this.userService.addFunds(parseFloat(this.sum)).subscribe(
@@ -30,7 +30,7 @@ export class BalanceComponent {
 
   reset() {
     this.sum = '';
-    this.card = '';
+    this.cardNumberB = '';
   }
 
 }

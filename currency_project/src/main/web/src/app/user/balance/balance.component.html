@@ -1,14 +1,12 @@
 <div class="current-funds">
   <div class="container">
     <span>Your current balance is ${{balance}}</span>
-    <a href="#demo" class="btn btn-default" data-toggle="collapse"><span id="plus"
-                                                                         class="glyphicon glyphicon-plus"></span>
-      add funds</a>
-    <div id="demo" class="collapse">
+    <a href="#add-f" class="btn btn-default" data-toggle="collapse">
+      <span id="plus" class="glyphicon glyphicon-plus"></span> add funds</a>
+    <div id="add-f" class="collapse">
       <div class="form-group">
-        <label for="card">Card number:</label>
-        <input class="form-control" id="card" name="card" [(ngModel)]="card" #c="ngModel"
-               data-inputmask="'mask': '9999 9999 9999 9999'"
+        <label for="card-b">Card number:</label>
+        <input class="form-control" id="card-b" name="card-b" [(ngModel)]="cardNumberB" #cb="ngModel"
                placeholder="you must type 16 digits" required pattern="[0-9]{16}"/>
       </div>
       <div class="form-group">
@@ -17,7 +15,7 @@
                pattern="[1-9][0-9]+"/>
       </div>
       <div class="form-group">
-        <button [disabled]="s.invalid || c.invalid" id="add" class="btn btn-default"
+        <button [disabled]="s.invalid || cb.invalid" id="add" class="btn btn-default"
                 (click)="addFunds()">
           add
         </button>

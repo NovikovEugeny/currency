@@ -1,5 +1,7 @@
 package by.bsuir.currency_project.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Set;
@@ -15,7 +17,9 @@ public class User implements Serializable {
     private String login;
     private String password;
     private double balance;
+    @JsonIgnore
     private Subscription subscription;
+    @JsonIgnore
     private Set<AnalyticsOrder> analyticsOrders;
 
     public User() {}

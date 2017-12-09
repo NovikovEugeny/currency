@@ -6,25 +6,48 @@ label {
   color: rgba(0, 0, 0, 0.86);
 }
 
-p {
+#sign-in-message {
   color: red;
   text-align: center;
 }
 
-button {
+#h-s-in-b, #sign-in-button {
   margin-left: 10%;
   color: #3A8EF2;
   border: 2px solid #3A8EF2;
 }
 
 #sign-in-button {
-  margin-left: 43%;
+  margin-left: 40%;
   margin-top: 2%;
   margin-bottom: -1%;
 }
 
-button:hover {
+#h-s-in-b:hover {
   color: #2E2E2E;
   border: 2px solid #2E2E2E;
   background-color: #4A99F7;
+}
+
+#sign-in-button:hover {
+  color: #2E2E2E;
+  border: 2px solid #2E2E2E;
+  background-color: #4A99F7;
+}
+
+.modal-window .modal-content {
+	margin-left: 21%;
+	margin-right: 21%;
+}
+
+.modal-window .modal-header {
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+
+.modal-window .modal-body {
+	border-bottom-right-radius: 5px; 
+	border-bottom-left-radius: 5px;
+	padding-left: 10%;
+	padding-right: 10%;
 }

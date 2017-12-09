@@ -10,13 +10,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 @Service
 public class SecurityService {
-
-    private static final Logger logger = LoggerFactory.getLogger(SecurityService.class);
 
     @Autowired
     private AuthenticationManager authenticationManager;
@@ -46,7 +41,6 @@ public class SecurityService {
 
         if (usernamePasswordAuthenticationToken.isAuthenticated()) {
             SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthenticationToken);
-            logger.info(String.format("Auto login %s successfully!", login));
         }
 
         return userRepository.findUserByLogin(login);

@@ -1,5 +1,7 @@
 package by.bsuir.currency_project.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Set;
@@ -12,6 +14,7 @@ public class SubscriptionType implements Serializable {
 
     private String type;
     private double cost;
+    @JsonIgnore
     private Set<Subscription> subscriptions;
 
     public SubscriptionType() {}

@@ -4,6 +4,10 @@ body {
     background-color: #252525;
 }
 
+input {
+  background-color: #f5f5f5;
+}
+
 .row {
     margin-right: 0px;
     margin-left: 0px;
@@ -21,6 +25,15 @@ body {
   font-size: 100px;
   color: #ffffff;
   text-align: center;
+}
+
+.coin {
+  margin-top: -50px;
+  margin-right: -90px;
+}
+
+#coin404 {
+  margin-top: -50px;
 }
 
 .modal-header {
@@ -45,4 +58,71 @@ input.ng-touched.ng-invalid {
 
 input.ng-touched.ng-valid {
   border: solid #10ff7a 1px;
+}
+
+th, td {
+  text-align: center;
+}
+
+th {
+  color: #B1ACAC;
+}
+
+td {
+  color: #e2dddd;
+}
+
+tbody {
+  display: block;
+  height: 455px;
+  width: 100%;
+  overflow-y: auto;
+}
+
+tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.table > tbody > tr > td {
+  border-top: 1px solid #777;
+}
+
+.table > thead > tr > th {
+  border-bottom: 1px #777;
+}
+
+table {
+  margin-top: -8px;
+}
+
+::-webkit-scrollbar-button {
+  background-repeat:no-repeat;
+  width:5px;
+  height:0px
+}
+
+::-webkit-scrollbar-track {
+  background-color: #777879
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 2px;
+  border-radius: 50px;
+  background-color: #3f3f3f;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color: #191919;
+}
+
+::-webkit-resizer{
+  background-repeat:no-repeat;
+  width:8px;
+  height:0px
+}
+
+::-webkit-scrollbar{
+  width: 10px;
 }

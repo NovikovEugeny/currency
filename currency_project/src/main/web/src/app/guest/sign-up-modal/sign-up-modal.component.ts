@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, ViewEncapsulation} from '@angular/core';
 import {NgbModal, NgbModalRef} from '@ng-bootstrap/ng-bootstrap';
 import {User} from "../../_models/user";
 import {UserService} from "../../_services/user.service";
@@ -7,6 +7,7 @@ import {Router} from "@angular/router";
 @Component({
   selector: 'app-sign-up-modal',
   templateUrl: './sign-up-modal.component.html',
+  encapsulation: ViewEncapsulation.None,
   styleUrls: ['./sign-up-modal.component.css']
 })
 export class SignUpModalComponent {
@@ -18,7 +19,7 @@ export class SignUpModalComponent {
   dialog: NgbModalRef;
 
   open(content) {
-    this.dialog = this.modalService.open(content);
+    this.dialog = this.modalService.open(content, { windowClass: 'modal-window-up' });
   }
 
   close() {
@@ -35,7 +36,7 @@ export class SignUpModalComponent {
     this.userService.signUp(this.user).subscribe(
       user => {
         localStorage.setItem('currentUser', JSON.stringify(user));
-        this.router.navigate(['/user']);
+        this.router.navigate(['/user/course-dynamics']);
         this.close();
       },
       error => {

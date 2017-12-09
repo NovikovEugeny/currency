@@ -6,25 +6,50 @@ label {
   color: rgba(0, 0, 0, 0.86);
 }
 
-p {
+#sign-up-message {
   color: red;
   text-align: center;
 }
 
-button {
+#h-s-up-b {
   margin-left: 10%;
   color: #3A8EF2;
   border: 2px solid #3A8EF2;
 }
 
 #sign-up-button {
-  margin-left: 43%;
+  margin-left: 41%;
   margin-top: 2%;
   margin-bottom: -1%;
+  color: #3A8EF2;
+  border: 2px solid #3A8EF2;
 }
 
-button:hover {
+#h-s-up-b:hover {
   color: #2E2E2E;
   border: 2px solid #2E2E2E;
   background-color: #4A99F7;
+}
+
+#sign-up-button:hover {
+  color: #2E2E2E;
+  border: 2px solid #2E2E2E;
+  background-color: #4A99F7;
+}
+
+.modal-window-up .modal-content {
+  margin-right: 15%;
+  margin-left:15%;
+}
+
+.modal-window-up .modal-body {
+  padding-right: 9%;
+  padding-left: 9%;
+  border-bottom-right-radius: 5px; 
+  border-bottom-left-radius: 5px;
+}
+
+.modal-window-up .modal-header {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
 }

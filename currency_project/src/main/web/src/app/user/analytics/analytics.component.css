@@ -1,0 +1,44 @@
+p {
+  font-size: 17px;
+  color: #B1ACAC;
+  margin-left: 40px;
+}
+
+label {
+  font-size: 15px;
+  color: #B1ACAC;
+}
+
+.form-group {
+  margin-left: 90px;
+  margin-right: 235px;
+}
+
+#pay {
+  margin-left: 125px;
+  width: 75px;
+}
+
+button, a {
+  color: #3A8EF2;
+  border: 2px solid #3A8EF2;
+}
+
+button:hover {
+  color: #2E2E2E;
+  border: 2px solid #2E2E2E;
+  background-color: #4A99F7;
+}
+
+hr {
+  border-top: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 515px;
+  width: 1px;
+}
+
+.alert {
+  width: 60%;
+  margin-left: 8%;
+}
