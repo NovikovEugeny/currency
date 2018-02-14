@@ -3,10 +3,6 @@ const request = require('sync-request');
 
 const util = require('./util');
 
-
-var net = new brain.NeuralNetwork();
-
-
 module.exports.getData = function(days) {
 	var url = 'http://www.nbrb.by/API/ExRates/Rates/Dynamics/145?startDate=' + util.getDStartDate() + '&endDate=' + util.getEndDate();
 	var response = request('GET', url);
@@ -17,7 +13,8 @@ module.exports.getData = function(days) {
 	for (var i = 0; i < data.length; i++) {
 		arr.push(data[i].Cur_OfficialRate/10);
 	}
-
+	
+        var net = new brain.NeuralNetwork();
 	var trainedNN = JSON.parse(util.readNN());
 	var outArr = [];
 
