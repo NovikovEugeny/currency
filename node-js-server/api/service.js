@@ -1,6 +1,5 @@
 const brain = require('brain');
 const request = require('sync-request');
-
 const util = require('./util');
 
 module.exports.getData = function(days) {
